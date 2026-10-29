@@ -1,5 +1,5 @@
 import { isRecord } from './is-record';
-/** The assigned packet: a public unscored sample here, replaced per candidate by an Assign packet commit. */
+/** The round's advisory packet; an unscored sample when `scored` is false. */
 export interface AdvisoryPacket {
   readonly packetId: string;
   readonly scored: boolean;

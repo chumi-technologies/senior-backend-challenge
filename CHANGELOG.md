@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0.6 — 2026-10-29
+
+- Candidates copy the public starter into their own repository and send its link back; no
+  invitation or per-candidate commit. The starter carries the current round's scored packet
+  (`assign-20261101-02`) and its data files.
+
 ## 1.0.0.5 — 2026-10-29
 
 - The starter template is public; candidates copy it without an invitation.

@@ -8,8 +8,8 @@ or screen-sharing. Agree the effort cap/deadline before starting; see challenge/
 ## Read first
 
 Read AGENTS.md before using a coding assistant. Claude/Gemini/Cursor/Windsurf entrypoints
-share that contract. START-HERE.md turns this public starter into a private repository under
-your account; the hiring team then pushes your own packet into it.
+share that contract. Copy this public starter into your own repository (START-HERE.md) and work
+there.
 Never publish the challenge, your solution or a PR. See docs/SUBMISSION.md for the workflow.
 
 This is a synthetic policy exercise, not an invitation to infer private production rules.
@@ -25,7 +25,7 @@ pnpm --silent challenge:advisory
 ```
 
 This command prints mixed-quality proposals as an **untrusted simulation**. The packet in this
-starter is an unscored sample; the hiring team pushes your own packet into your repository. Some assigned proposals cannot be settled from the contract text: their answer depends on
+starter is the scored packet for the current round. Some proposals cannot be settled from the contract text: their answer depends on
 what the supplied inputs actually produce when you run them. The assistant
 must relay them without adding answer labels, then stop at HUMAN_DECISION_REQUIRED. You supply
 your own initial decisions, sources, predicted check outcomes and reversal conditions. Commit
@@ -90,12 +90,12 @@ acceptance and scoring are separate and are never provided to your assistant.
 - **Planner behavior**: the hiring team runs `route:plan` against a private acceptance batch set
   outside your workspace. Public fixtures are examples, not coverage; your own narrative does not
   change this score.
-- **Judgment**: your assigned packet's decisions, predictions and revisions, read against what the
+- **Judgment**: your packet decisions, predictions and revisions, read against what the
   supplied inputs actually produce. A wrong prediction corrected by an observation is good signal.
 - **Live follow-up (required)**: 30 minutes on a call, on your own submission, without AI
   assistance. See challenge/SESSION.md, stage S4. No hiring decision is made without it.
 
 AI may assist as specified, but cannot impersonate your decisions. AGENTS.md, commit order,
 timestamps and a passing implementation cannot prove you thought independently; the live
-follow-up is where independent reasoning is observed. Submit one private PR with the checkpoint
+follow-up is where independent reasoning is observed. Submit one PR in your repository with the checkpoint
 commit, final evidence, time spent and remaining limits.

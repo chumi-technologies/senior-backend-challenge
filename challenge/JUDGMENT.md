@@ -6,8 +6,8 @@ The assistant must quote the packet rather than quietly correcting or endorsing 
 You own the first decisions and predictions; do not ask the assistant to invent them.
 You may inspect contract/source documents, then supply your reasoning explicitly.
 
-The public starter packet (`public-sample-v1`) is an unscored sample. The hiring team pushes your
-own challenge/advisory-packet.json into your repository; use its packetId and proposal IDs. Record every proposal in that packet once in submission/judgment.json. Start with your initial
+challenge/advisory-packet.json is the scored packet for the current round; use its packetId
+and proposal IDs. Record every proposal in that packet once in submission/judgment.json. Start with your initial
 position/prediction **before** the discriminating check. Commit this initial checkpoint
 privately, then record the actual check/output and final position after verification.
 The initial checkpoint may be incomplete; only the final submitted record must satisfy

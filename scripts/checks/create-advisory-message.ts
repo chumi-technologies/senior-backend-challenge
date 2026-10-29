@@ -1,5 +1,5 @@
 import { readAdvisoryPacket } from './advisory-packet';
-const SAMPLE_NOTICE: string = 'PUBLIC_SAMPLE: This packet is public and unscored. The hiring team pushes your own scored packet into your repository; see START-HERE.md.\n';
+const SAMPLE_NOTICE: string = 'PUBLIC_SAMPLE: This packet is an unscored sample; the starter you received should carry the scored packet for the current round.\n';
 /** Render a disclosed, deliberately unreliable simulation without assigning answer labels. */
 export function createAdvisoryMessage(packet: unknown): string {
   const { scored } = readAdvisoryPacket(packet);

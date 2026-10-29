@@ -1,16 +1,12 @@
 # Start here
 
-This starter repository is public. Your work happens in your own private copy, never here and
-never in a public fork.
+This starter repository is public. Do the work in your own repository, never here.
 
-1. Open the link and choose **Use this template → Create a new repository**. Set the owner to your
-   own account and the visibility to **Private**. Leave "Include all branches" off.
-2. In your new repository, open Settings → Collaborators and invite the reviewer account(s) you
-   were given. Do not add anyone else, and never make the repository public.
-3. Wait for a commit titled `Assign packet <packetId>` from the hiring team. It adds your own
-   scored advisory packet and the data files it refers to. Pull it before anything else; do not
-   edit or replace those files.
-4. `pnpm --silent challenge:advisory` must no longer print a `PUBLIC_SAMPLE` line. If it does, you
-   do not have your packet yet; stop and ask.
-5. Continue with docs/SUBMISSION.md from step 2. Ask questions in your repository's PR or issues,
-   which are the private thread the docs refer to.
+1. Copy it into your own account: **Use this template → Create a new repository**, or clone it and
+   push to a new repository you own. Do not open PRs or issues on this repository.
+2. Work there following docs/SUBMISSION.md. The advisory packet and its data files in
+   `challenge/` and `ops/` are the scored ones; do not edit or replace them.
+3. When you are done, send the repository link to the person who sent you this challenge. If
+   the repository is private, first add the reviewer account they name as a collaborator.
+
+Questions go to that same person; that is the private thread the docs refer to.

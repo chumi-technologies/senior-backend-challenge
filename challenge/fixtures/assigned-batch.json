@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "now": "2026-11-19T19:33:36.250Z",
+  "freshness": {
+    "probeMaxAgeSeconds": 300,
+    "priceMaxAgeSeconds": 7200
+  },
+  "requests": [
+    {
+      "id": "req-808",
+      "tenantId": "tenant-3",
+      "model": "ember-4",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": false,
+      "credentialScope": "platform"
+    },
+    {
+      "id": "req-428",
+      "tenantId": "tenant-5",
+      "model": "atlas-2",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": true,
+      "credentialScope": "platform"
+    },
+    {
+      "id": "req-609",
+      "tenantId": "tenant-8",
+      "model": "borealis-1",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": false,
+      "credentialScope": "platform"
+    },
+    {
+      "id": "req-184",
+      "tenantId": "tenant-3",
+      "model": "fjord-1",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": true,
+      "credentialScope": "byok:tenant-11"
+    },
+    {
+      "id": "req-211",
+      "tenantId": "tenant-8",
+      "model": "dune-2",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": true,
+      "credentialScope": "platform"
+    },
+    {
+      "id": "req-336",
+      "tenantId": "tenant-1",
+      "model": "corvid-3",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": true,
+      "credentialScope": "platform",
+      "thinkingShape": "signed-v2"
+    },
+    {
+      "id": "req-875",
+      "tenantId": "tenant-5",
+      "model": "fjord-1",
+      "surface": "responses",
+      "stream": true,
+      "region": "eu-west",
+      "fallbackConsent": false,
+      "credentialScope": "platform"
+    }
+  ],
+  "cells": [
+    {
+      "id": "cell-ash-78",
+      "vendor": "kestrel",
+      "credentialGroup": "cred-rowan-75",
+      "credentialScope": "platform",
+      "models": [
+        "corvid-3"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T12:31:52.250-07:00",
+      "priceObservedAt": "2026-11-20T03:16:47.250+08:00",
+      "pricePerMillionInput": 2.89,
+      "priority": 1,
+      "thinkingShapes": [
+        "plain"
+      ]
+    },
+    {
+      "id": "cell-maple-98",
+      "vendor": "tidal",
+      "credentialGroup": "cred-birch-96",
+      "credentialScope": "platform",
+      "models": [
+        "dune-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:30:18.250+08:00",
+      "priceObservedAt": "2026-11-20T03:58:35.250+09:00",
+      "pricePerMillionInput": 1.19,
+      "priority": 4
+    },
+    {
+      "id": "cell-hazel-17",
+      "vendor": "kestrel",
+      "credentialGroup": "cred-hazel-30",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:32:11.250+08:00",
+      "priceObservedAt": "2026-11-19T14:48:48.250-03:00",
+      "pricePerMillionInput": 2.47,
+      "priority": 2
+    },
+    {
+      "id": "cell-rowan-41",
+      "vendor": "kestrel",
+      "credentialGroup": "cred-yew-85",
+      "credentialScope": "platform",
+      "models": [
+        "corvid-3"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "us-east"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:30:55.250+08:00",
+      "priceObservedAt": "2026-11-20T01:53:11.250+08:00",
+      "pricePerMillionInput": 4.24,
+      "priority": 9,
+      "thinkingShapes": [
+        "signed-v2"
+      ]
+    },
+    {
+      "id": "cell-elm-73",
+      "vendor": "meridian",
+      "credentialGroup": "cred-ash-50",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "unknown",
+      "lastProbeAt": "2026-11-19T14:32:43.250-05:00",
+      "priceObservedAt": "2026-11-19T13:43:30.250-05:00",
+      "pricePerMillionInput": 0.55,
+      "priority": 2
+    },
+    {
+      "id": "cell-fir-71",
+      "vendor": "northwind",
+      "credentialGroup": "cred-larch-73",
+      "credentialScope": "platform",
+      "models": [
+        "fjord-1"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "blocked",
+      "lastProbeAt": "2026-11-19T16:31:46.250-03:00",
+      "priceObservedAt": "2026-11-20T00:55:12.250+05:30",
+      "pricePerMillionInput": 2.74,
+      "priority": 2
+    },
+    {
+      "id": "cell-maple-94",
+      "vendor": "meridian",
+      "credentialGroup": "cred-ash-46",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T01:03:36.500+05:30",
+      "priceObservedAt": "2026-11-20T02:54:55.250+08:00",
+      "pricePerMillionInput": 0.36,
+      "priority": 0
+    },
+    {
+      "id": "cell-pine-61",
+      "vendor": "solace",
+      "credentialGroup": "cred-hazel-30",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T19:32:19.250Z",
+      "priceObservedAt": "2026-11-19T10:43:30.250-07:00",
+      "pricePerMillionInput": 4.66,
+      "priority": 1
+    },
+    {
+      "id": "cell-hazel-14",
+      "vendor": "tidal",
+      "credentialGroup": "cred-pine-91",
+      "credentialScope": "platform",
+      "models": [
+        "dune-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:30:05.250+08:00",
+      "priceObservedAt": "2026-11-20T03:03:38.250+08:00",
+      "pricePerMillionInput": 1.91,
+      "priority": 9
+    },
+    {
+      "id": "cell-birch-19",
+      "vendor": "tidal",
+      "credentialGroup": "cred-ash-99",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T04:28:35.250+09:00",
+      "priceObservedAt": "2026-11-20T03:07:59.250+08:00",
+      "pricePerMillionInput": 5.05,
+      "priority": 4
+    },
+    {
+      "id": "cell-maple-67",
+      "vendor": "meridian",
+      "credentialGroup": "cred-ash-77",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T14:32:07.250-05:00",
+      "priceObservedAt": "2026-11-19T17:33:36.250Z",
+      "pricePerMillionInput": 2.46,
+      "priority": 5
+    },
+    {
+      "id": "cell-maple-91",
+      "vendor": "solace",
+      "credentialGroup": "cred-cedar-56",
+      "credentialScope": "platform",
+      "models": [
+        "dune-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "blocked",
+      "lastProbeAt": "2026-11-19T12:31:47.250-07:00",
+      "priceObservedAt": "2026-11-20T01:45:55.250+08:00",
+      "pricePerMillionInput": 0.21,
+      "priority": 4
+    },
+    {
+      "id": "cell-elm-21",
+      "vendor": "meridian",
+      "credentialGroup": "cred-fir-77",
+      "credentialScope": "platform",
+      "models": [
+        "ember-4"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T20:31:43.250+01:00",
+      "priceObservedAt": "2026-11-20T02:14:28.250+08:00",
+      "pricePerMillionInput": 0.15,
+      "priority": 1
+    },
+    {
+      "id": "cell-fir-65",
+      "vendor": "kestrel",
+      "credentialGroup": "cred-fir-96",
+      "credentialScope": "platform",
+      "models": [
+        "corvid-3"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:33:13.250+08:00",
+      "priceObservedAt": "2026-11-19T14:51:04.250-03:00",
+      "pricePerMillionInput": 0.28,
+      "priority": 2
+    },
+    {
+      "id": "cell-ash-14",
+      "vendor": "meridian",
+      "credentialGroup": "cred-fir-26",
+      "credentialScope": "platform",
+      "models": [
+        "borealis-1"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "us-east"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T20:30:44.250+01:00",
+      "priceObservedAt": "2026-11-20T02:49:20.250+08:00",
+      "pricePerMillionInput": 0.6,
+      "priority": 8
+    },
+    {
+      "id": "cell-pine-59",
+      "vendor": "northwind",
+      "credentialGroup": "cred-rowan-48",
+      "credentialScope": "platform",
+      "models": [
+        "fjord-1"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T20:30:29.250+01:00",
+      "priceObservedAt": "2026-11-20T02:59:06.250+09:00",
+      "pricePerMillionInput": 3.08,
+      "priority": 2
+    },
+    {
+      "id": "cell-fir-87",
+      "vendor": "meridian",
+      "credentialGroup": "cred-cedar-81",
+      "credentialScope": "platform",
+      "models": [
+        "fjord-1"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "us-east"
+      ],
+      "health": "blocked",
+      "lastProbeAt": "2026-11-19T20:32:04.250+01:00",
+      "priceObservedAt": "2026-11-19T19:07:37.250+01:00",
+      "pricePerMillionInput": 3.59,
+      "priority": 2
+    },
+    {
+      "id": "cell-yew-73",
+      "vendor": "solace",
+      "credentialGroup": "cred-elm-93",
+      "credentialScope": "platform",
+      "models": [
+        "borealis-1"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T20:31:01.250+01:00",
+      "priceObservedAt": "2026-11-19T23:54:40.250+05:30",
+      "pricePerMillionInput": 2.39,
+      "priority": 9
+    },
+    {
+      "id": "cell-elm-31",
+      "vendor": "tidal",
+      "credentialGroup": "cred-pine-30",
+      "credentialScope": "platform",
+      "models": [
+        "atlas-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T03:28:36.250+08:00",
+      "priceObservedAt": "2026-11-20T03:59:51.250+09:00",
+      "pricePerMillionInput": 4.65,
+      "priority": 3
+    },
+    {
+      "id": "cell-fir-35",
+      "vendor": "solace",
+      "credentialGroup": "cred-oak-52",
+      "credentialScope": "platform",
+      "models": [
+        "ember-4"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-20T00:59:14.250+05:30",
+      "priceObservedAt": "2026-11-20T02:52:33.250+08:00",
+      "pricePerMillionInput": 2.4,
+      "priority": 3
+    },
+    {
+      "id": "cell-hazel-38",
+      "vendor": "aurora",
+      "credentialGroup": "cred-birch-46",
+      "credentialScope": "platform",
+      "models": [
+        "ember-4"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "eu-west"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T19:30:12.250Z",
+      "priceObservedAt": "2026-11-19T10:30:20.250-07:00",
+      "pricePerMillionInput": 0,
+      "priority": 0
+    },
+    {
+      "id": "cell-rowan-26",
+      "vendor": "kestrel",
+      "credentialGroup": "cred-larch-68",
+      "credentialScope": "platform",
+      "models": [
+        "dune-2"
+      ],
+      "surfaces": {
+        "responses": {
+          "stream": true,
+          "nonStream": true
+        }
+      },
+      "regions": [
+        "us-east"
+      ],
+      "health": "passing",
+      "lastProbeAt": "2026-11-19T16:32:34.250-03:00",
+      "priceObservedAt": "2026-11-19T13:19:59.250-05:00",
+      "pricePerMillionInput": 0.79,
+      "priority": 9
+    }
+  ]
+}
