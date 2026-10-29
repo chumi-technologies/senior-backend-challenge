@@ -1,7 +1,7 @@
 # Private asynchronous GitHub submission
 
-The hiring team sends you a link to the private starter repository, read-only, plus the reviewer
-account(s) to invite. You never get access to interviewer answers, hidden acceptance, scoring or
+The hiring team sends you a link to the public starter repository plus the reviewer account(s)
+to invite. You never get access to interviewer answers, hidden acceptance, scoring or
 another candidate's work.
 
 1. Follow START-HERE.md: create a private repository from the template under your account, invite

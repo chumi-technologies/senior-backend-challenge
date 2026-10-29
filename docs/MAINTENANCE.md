@@ -52,11 +52,9 @@ pretest records in restricted storage only.
   Never merge, cherry-pick or diff `hiring` into `main`; the public-boundary check flags
   answer-key paths if that happens. Its history before 2026-10-28 was public: 13 public forks
   keep earlier starters and the sample packet, none holds restricted material.
-- `chumi-technologies/senior-backend-challenge` (private template): one snapshot commit per
+- `chumi-technologies/senior-backend-challenge` (public template): one snapshot commit per
   released starter, published from internal `main` by `hiring`'s `issue/publish-starter.mjs`.
-  No PRs, issues or other branches live there, because candidates can read all of it.
+  No PRs, issues or other branches live there. Nothing restricted may ever be pushed to it.
 
-Per candidate (`hiring`'s `issue/candidate.mjs`): grant read access to the template and send its
-link; the candidate creates a private repository from it and invites the reviewers; push their
-`Assign packet` commit; then remove their template access. A read collaborator on a private repo
-takes a paid seat while access lasts, so revoke it promptly.
+Per candidate (`hiring`'s `issue/candidate.mjs`): send the template link; the candidate creates a
+private repository from it and invites the reviewers; push their `Assign packet` commit.

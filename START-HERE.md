@@ -1,7 +1,7 @@
 # Start here
 
-You received a link to this private starter repository and read-only access to it. Your work
-happens in your own copy, never here.
+This starter repository is public. Your work happens in your own private copy, never here and
+never in a public fork.
 
 1. Open the link and choose **Use this template → Create a new repository**. Set the owner to your
    own account and the visibility to **Private**. Leave "Include all branches" off.
@@ -14,5 +14,3 @@ happens in your own copy, never here.
    do not have your packet yet; stop and ask.
 5. Continue with docs/SUBMISSION.md from step 2. Ask questions in your repository's PR or issues,
    which are the private thread the docs refer to.
-
-Your read access to this starter repository is removed once your copy exists.

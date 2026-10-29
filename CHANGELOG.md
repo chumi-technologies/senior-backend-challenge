@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0.5 — 2026-10-29
+
+- The starter template is public; candidates copy it without an invitation.
+
 ## 1.0.0.4 — 2026-10-29
 
 - Deliver the challenge as a link to a private template repository. Candidates create their own

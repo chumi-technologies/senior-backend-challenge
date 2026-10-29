@@ -8,8 +8,8 @@ or screen-sharing. Agree the effort cap/deadline before starting; see challenge/
 ## Read first
 
 Read AGENTS.md before using a coding assistant. Claude/Gemini/Cursor/Windsurf entrypoints
-share that contract. You receive a link to this private starter; START-HERE.md turns it into a
-private repository under your account, and the hiring team then pushes your own packet into it.
+share that contract. START-HERE.md turns this public starter into a private repository under
+your account; the hiring team then pushes your own packet into it.
 Never publish the challenge, your solution or a PR. See docs/SUBMISSION.md for the workflow.
 
 This is a synthetic policy exercise, not an invitation to infer private production rules.
