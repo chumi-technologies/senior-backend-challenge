@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "status": "not_completed",
+  "revision": {
+    "headSha": "",
+    "isDirty": true,
+    "diffSha256": ""
+  },
+  "checks": []
+}

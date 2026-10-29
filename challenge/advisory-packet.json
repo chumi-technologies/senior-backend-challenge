@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "packetId": "public-sample-v1",
+  "scored": false,
+  "classification": "untrusted-simulation",
+  "stage": "before-implementation",
+  "proposals": [
+    {
+      "id": "A",
+      "claim": "Sort eligible cells by ascending priority, then cell ID in JavaScript UTF-16 code-unit order. Keep the first cell for each credential group. If fallback consent is false, expose only the first remaining attempt. Price is freshness evidence, not a ranking input in this exercise."
+    },
+    {
+      "id": "B",
+      "claim": "Two eligible cells have different vendor names, so including both always provides independent fallback capacity, even if the credential-group values are identical."
+    },
+    {
+      "id": "C",
+      "claim": "A probe age exactly equal to the maximum should be stale: using strictly less than the configured maximum is safer. A timestamp one second in the future is fresh enough because its age is less than the limit."
+    },
+    {
+      "id": "D",
+      "claim": "A local test suite returned exit code zero. We can now say the production customer failure is fixed, without checking which tests ran, which source revision ran, or whether a production deployment occurred."
+    },
+    {
+      "id": "E",
+      "claim": "An operations note says some streaming calls are slow. Cut the global production timeout in half immediately. No stage-level timing, cancellation data, completion distribution, or customer impact sample accompanies the note."
+    },
+    {
+      "id": "F",
+      "claim": "A clean, recorded source revision and replay command that runs meaningful positive and negative controls can support a claim about the tested local contract. It does not, by itself, prove a live deployment or cover every failure mode."
+    }
+  ]
+}
