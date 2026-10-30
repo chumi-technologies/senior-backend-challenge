@@ -16,7 +16,7 @@ The interviewer independently verifies protected files against the supplied base
 and runs acceptance outside the candidate workspace. Never mount private acceptance
 material in a sandbox that executes candidate code. The async advisory decision pause
 is a candidate responsibility, not observed human independence. Only the hiring team
-can authorize protected-file/acceptance exceptions in the private GitHub thread.
+can authorize protected-file/acceptance exceptions through the existing email/message contact.
 The public advisory simulation contains claims only, never private classifications.
 
 ## Scored packets, pretest and acceptance (private)
@@ -56,6 +56,10 @@ it for each round, and sooner if solutions to it appear publicly.
   released starter, published from internal `main` by `hiring`'s `issue/publish-starter.mjs`.
   No PRs, issues or other branches live there. Nothing restricted may ever be pushed to it.
 
-Per candidate: send the template link. The candidate works in their own repository and sends
-its link back (adding the reviewer if it is private). New round: generate a packet on `hiring`,
+Per candidate: send only the public template link and the reviewer GitHub account. The candidate
+creates a private copy under their own account with Use this template, clones it normally, and
+sends back its link and final SHA after inviting the reviewer. No founder assignment, archive
+verification, Git reinitialization, special thread or mandatory candidate PR is needed. Publish
+no candidate solutions. Keep the public repository description consistent with self-service access.
+New round: generate a packet on `hiring`,
 pretest it, copy its files into internal `main` by PR, then publish the starter.

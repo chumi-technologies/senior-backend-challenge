@@ -1,5 +1,17 @@
 # Changelog
 
+For current candidate instructions, use START-HERE.md. Older entries describe retired workflows.
+
+## 1.0.1.0 — 2026-10-30
+
+- Use one self-service path: candidates create a private copy with Use this template in their own
+  GitHub account, clone normally, push their work, invite the reviewer and send back the link/SHA.
+- Remove mandatory candidate branches/PRs, founder assignment, Git reinitialization and references
+  to a special private thread. Preserve existing work and history if a candidate already started.
+- Align the README, start guide, submission/stage/evidence documents and agent entrypoint. Keep
+  the human-decision checkpoint and private acceptance/scoring boundaries unchanged.
+- Add onboarding consistency checks and exercise source provenance in an ordinary cloned snapshot.
+
 ## 1.0.0.6 — 2026-10-29
 
 - Candidates copy the public starter into their own repository and send its link back; no

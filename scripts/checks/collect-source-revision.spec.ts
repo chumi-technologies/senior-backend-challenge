@@ -19,6 +19,19 @@ beforeEach((): void => {
 });
 afterEach((): void => rmSync(repositoryRoot, { recursive: true, force: true }));
 describe('submission source provenance', (): void => {
+  it('supports a normal clone of a candidate-owned snapshot without reinitialization or a PR', (): void => {
+    const inputCloneRoot: string = join(repositoryRoot, 'candidate-copy');
+    const expectedHeadSha: string = collectSourceRevision(repositoryRoot).headSha;
+    execFileSync('git', ['clone', '--quiet', '--no-local', repositoryRoot, inputCloneRoot], { stdio: 'pipe' });
+    const actualClonedRevision: ReturnType<typeof collectSourceRevision> = collectSourceRevision(inputCloneRoot);
+    expect(actualClonedRevision.headSha).toBe(expectedHeadSha);
+    expect(actualClonedRevision.isDirty).toBe(false);
+    writeFileSync(join(inputCloneRoot, 'submission/source.ts'), 'const value: number = 2;\n');
+    const actualWorkingRevision: ReturnType<typeof collectSourceRevision> = collectSourceRevision(inputCloneRoot);
+    expect(actualWorkingRevision.headSha).toBe(expectedHeadSha);
+    expect(actualWorkingRevision.isDirty).toBe(true);
+    expect(actualWorkingRevision.diffSha256).not.toBe(actualClonedRevision.diffSha256);
+  });
   it('records clean commit and changes the fingerprint when source changes', (): void => {
     const actualBefore: ReturnType<typeof collectSourceRevision> = collectSourceRevision(repositoryRoot);
     writeFileSync(join(repositoryRoot, 'submission/source.ts'), 'const value: number = 2;\n');

@@ -1,6 +1,6 @@
 {
   "name": "senior-backend-challenge",
-  "version": "1.0.0.6",
+  "version": "1.0.1.0",
   "description": "Senior Backend Interview: Human Judgment and Engineering Harness",
   "private": true,
   "workspaces": [

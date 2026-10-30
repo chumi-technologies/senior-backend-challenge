@@ -1,21 +1,48 @@
-# Private asynchronous GitHub submission
+# Submit from your own GitHub repository
 
-The hiring team sends you a link to the public starter repository. You never get access to interviewer answers, hidden acceptance, scoring or
-another candidate's work.
+The link you received is the public starter. You create the working repository yourself;
+the founder does not need to assign one. Follow [START-HERE.md](../START-HERE.md):
+**Use this template → Create a new repository → your own account → Private**, then clone it
+normally. Do not run `git init` or replace the clone's history.
 
-1. Follow START-HERE.md: copy the starter into your own repository and work there.
-2. Create a working branch and collect source facts. Run challenge:advisory, personally supply initial decisions/predictions
-   and commit that checkpoint before implementation.
-3. Continue asynchronously after explicitly deciding the route. Preserve corrections and actual
-   check results. No live interviewer release is required; protected changes still need a written
-   hiring-team exception in this private thread **before** editing.
-4. Open one PR in your repository with checkpoint/final SHAs, elapsed work, invariant coverage, actual commands,
-   failure/negative-control evidence, system design and handoff. Do not upload personal chat/accounts.
-5. Stop at the agreed effort cap and name unfinished items. The team freezes your final SHA,
-   runs its private acceptance batches against it, and schedules the 30-minute S4 live follow-up;
-   your timestamps/commits are declarations, not AI-free proof.
-6. Send the repository link (START-HERE.md step 3). Do not post your solution on this starter
-   repository, and do not share personal chats or credentials.
+## Work and submit
 
-The team may ask asynchronous clarification in your PR; the S4 live follow-up is required before a
-hiring decision. Local checks are not a hiring decision.
+1. Read AGENTS.md, agree the effort cap/deadline with the sender, and run the README setup checks.
+2. Run `pnpm --silent challenge:advisory`. Personally supply your initial decisions and
+   predictions, then commit that checkpoint before implementation.
+3. Continue asynchronously after explicitly deciding the route. Preserve corrections, real
+   check results and source provenance. You do not wait for interviewer release between stages.
+   Protected-file, dependency or acceptance changes still need written hiring-team permission
+   **before** editing; ask the sender by email or message.
+4. Complete the required artifacts under `submission/`, including replay commands and handoff
+   in notes.md. Commit and push your work to your own private repository. You may use its default
+   branch; a separate branch or pull request is optional, not a submission requirement.
+5. Invite the reviewer GitHub account named by the sender as a **collaborator** on your private
+   repository (Settings → Collaborators). Send the repository link and final commit SHA to the
+   sender, along with the initial checkpoint SHA, elapsed work and any unfinished items. If you
+   used a branch or PR, include its link too. Do not open PRs or issues on the public starter.
+
+Get the final SHA after committing:
+
+```sh
+git rev-parse HEAD
+```
+
+Keep the repository private. Never send credentials, personal chats, interviewer answers,
+hidden acceptance or scoring material. You are not expected to have any interviewer material.
+
+## Already started?
+
+Do not redo your work. If it is already in your own private repository, continue there. If you
+cloned the public starter, create an empty private repository under your account, change the
+clone's `origin` to that repository, then push your existing branch. Keep `.git`, your checkpoint
+and all subsequent commits intact; no archive download or history reset is required. Never push
+your solution to the starter. Ask the sender if you need the reviewer account.
+
+## What happens next
+
+The hiring team reads your submission at the final SHA, independently runs its private acceptance
+batches, and schedules the required 30-minute S4 live follow-up. Clarifications use the existing
+email or message conversation. No separate GitHub discussion is needed. Stop at the agreed
+effort cap and report unfinished work; local checks, commit order and timestamps are not a hiring
+decision or proof of AI-free reasoning.

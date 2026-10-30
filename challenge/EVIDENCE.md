@@ -20,5 +20,5 @@ source fingerprint but cannot establish honest execution or independent human ju
 The interviewer reads actual output and independently reproduces relevant checks.
 
 Do not claim a skipped check passed. Do not fabricate a receipt to satisfy the schema.
-Full logs may remain in the agreed private submission channel; do not put secrets,
-personal chats, or any interviewer material into the public repository.
+Keep full logs in your private working repository or send them privately to the sender. Never
+include secrets, personal chats or interviewer material, and do not publish your solution.

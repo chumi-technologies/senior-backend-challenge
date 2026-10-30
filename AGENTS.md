@@ -7,7 +7,7 @@ This governs candidate work, not owner-authorized starter maintenance.
 - Collect primary-source facts, inspect supplied files and run honest local checks.
 - Use AI for research, implementation, tests and handoff within the stages below.
 - Modify only submission/; protected-file/dependency/acceptance changes need the hiring
-  team's explicit written exception in the private GitHub thread before editing.
+  team's explicit written permission via the candidate's existing contact before editing.
 
 ## Mandatory advisory and human-decision pause
 - Before any implementation, run `pnpm --silent challenge:advisory` and relay its

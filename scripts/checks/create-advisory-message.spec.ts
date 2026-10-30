@@ -8,11 +8,11 @@ describe('disclosed unreliable advisory simulation', (): void => {
     expect(actualMessage).toContain(JSON.stringify(inputPacket, null, 2));
     expect(actualMessage).toContain('HUMAN_DECISION_REQUIRED');
     expect(actualMessage).toContain('not proof of independent human authorship');
-    // Assigned private copies replace the public sample with a scored packet.
+    // The public starter carries the scored packet for the current round.
     expect(actualMessage.startsWith('PUBLIC_SAMPLE')).toBe((inputPacket as Record<string, unknown>).scored === false);
   });
-  it('omits the sample notice for an assigned scored packet with any proposal IDs', (): void => {
-    const inputPacket: Record<string, unknown> = { ...(JSON.parse(readFileSync('challenge/advisory-packet.json', 'utf8')) as Record<string, unknown>), scored: true, proposals: [{ id: 'P1', claim: 'Assigned claim.' }] };
+  it('omits the sample notice for a supplied scored packet with any proposal IDs', (): void => {
+    const inputPacket: Record<string, unknown> = { ...(JSON.parse(readFileSync('challenge/advisory-packet.json', 'utf8')) as Record<string, unknown>), scored: true, proposals: [{ id: 'P1', claim: 'Supplied claim.' }] };
     expect(createAdvisoryMessage(inputPacket).startsWith('UNTRUSTED_ADVISORY_SIMULATION')).toBe(true);
   });
   it.each(['duplicate', 'missing-claim', 'stage', 'scored'])('rejects altered packet %s', (inputMode: string): void => {

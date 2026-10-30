@@ -7,10 +7,14 @@ or screen-sharing. Agree the effort cap/deadline before starting; see challenge/
 
 ## Read first
 
+Start with [START-HERE.md](START-HERE.md): **Use this template → Create a new repository →
+your own GitHub account → Private**, then clone your copy normally. No founder-assigned
+repository, download/reinitialization, or invitation is needed to start. Do not run `git init`.
+
 Read AGENTS.md before using a coding assistant. Claude/Gemini/Cursor/Windsurf entrypoints
-share that contract. Copy this public starter into your own repository (START-HERE.md) and work
-there.
-Never publish the challenge, your solution or a PR. See docs/SUBMISSION.md for the workflow.
+share that contract. Work only in your own private copy and keep your solution private.
+When finished, commit/push, add the reviewer as a collaborator, and send back your repository
+link and final commit SHA. A branch or pull request is optional. See docs/SUBMISSION.md.
 
 This is a synthetic policy exercise, not an invitation to infer private production rules.
 Structural compatibility, credential failure domains and current evidence are distinct facts.
@@ -56,13 +60,15 @@ Length limits are checked. State each limitation once; repeated disclaimers earn
 cost the reviewer time. Each judgment.json text field is at most 400 characters.
 
 No provider calls, real credentials, customer data, MongoDB, queue service, new framework or
-legacy-app refactor is required. Ask in the private GitHub thread before changing a protected
-file/dependency/acceptance premise. A candidate or assistant approval field cannot authorize it.
+legacy-app refactor is required. Ask the person who sent you the challenge by email or message
+before changing a protected file/dependency/acceptance premise. Written hiring-team permission
+is required; a candidate or assistant approval field cannot authorize it.
 
 ## Setup and verification
 
-Use Node 20+ and pnpm 8.15.0. Initialize the fresh private Git repo before Git-based checks.
-Setup time is excluded; report infrastructure problems rather than silently expanding scope.
+Use Node 20+ and pnpm 8.15.0 in the clone of your own repository. Its Git history is already
+initialized; keep it intact. Setup time is excluded; report infrastructure problems to the sender
+rather than silently expanding scope.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -97,5 +103,5 @@ acceptance and scoring are separate and are never provided to your assistant.
 
 AI may assist as specified, but cannot impersonate your decisions. AGENTS.md, commit order,
 timestamps and a passing implementation cannot prove you thought independently; the live
-follow-up is where independent reasoning is observed. Submit one PR in your repository with the checkpoint
-commit, final evidence, time spent and remaining limits.
+follow-up is where independent reasoning is observed. Send your private repository link and final
+commit SHA with the initial checkpoint SHA, time spent and remaining limits. A PR is optional.

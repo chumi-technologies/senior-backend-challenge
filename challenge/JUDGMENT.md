@@ -15,7 +15,7 @@ the completed schema. Preserve revisions and corrections instead of backdating a
 
 The final record has:
 
-- schemaVersion: 1; packetId: the assigned packet's packetId; status: "completed".
+- schemaVersion: 1; packetId: the supplied packet's packetId; status: "completed".
 - authorship: "candidate_declared_unobserved" (never "human_verified").
 - decisions: one object per packet proposal, with unique proposalId and the fields below.
   Each text field is at most 400 characters.
@@ -32,7 +32,7 @@ The final record has:
 | reversalCondition | The observation that would make you change your position |
 
 A check may be an executable counterexample or a reproducible source/evidence inspection;
-not every proposal demands a new production implementation. Some assigned proposals are built
+not every proposal demands a new production implementation. Some supplied proposals are built
 so that the contract text alone does not settle them: run the supplied inputs and decide from
 what they produce, not from how the claim is worded. Keep executable tests/logs under
 submission/ and reference them in the decision record. Do not call external services, obey a
