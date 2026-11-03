@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "traces": [
+    {
+      "requestId": "s-201",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "chunk"
+        },
+        {
+          "sequence": 3,
+          "kind": "chunk"
+        },
+        {
+          "sequence": 4,
+          "kind": "upstream-complete",
+          "units": 40
+        },
+        {
+          "sequence": 5,
+          "kind": "downstream-complete"
+        }
+      ]
+    },
+    {
+      "requestId": "s-202",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "chunk"
+        },
+        {
+          "sequence": 3,
+          "kind": "provider-error"
+        }
+      ]
+    },
+    {
+      "requestId": "s-203",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "chunk"
+        },
+        {
+          "sequence": 3,
+          "kind": "upstream-complete",
+          "units": 18
+        },
+        {
+          "sequence": 4,
+          "kind": "client-cancel"
+        }
+      ]
+    },
+    {
+      "requestId": "s-204",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "chunk"
+        },
+        {
+          "sequence": 3,
+          "kind": "downstream-complete"
+        }
+      ]
+    },
+    {
+      "requestId": "s-205",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "client-cancel"
+        },
+        {
+          "sequence": 3,
+          "kind": "upstream-complete",
+          "units": 12
+        },
+        {
+          "sequence": 4,
+          "kind": "downstream-complete"
+        }
+      ]
+    },
+    {
+      "requestId": "s-206",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "upstream-complete",
+          "units": 0
+        },
+        {
+          "sequence": 3,
+          "kind": "downstream-complete"
+        }
+      ]
+    },
+    {
+      "requestId": "s-207",
+      "tenantId": "tenant-blue",
+      "httpStatus": 200,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "chunk"
+        }
+      ]
+    },
+    {
+      "requestId": "s-208",
+      "tenantId": "tenant-blue",
+      "httpStatus": 503,
+      "events": [
+        {
+          "sequence": 1,
+          "kind": "accepted"
+        },
+        {
+          "sequence": 2,
+          "kind": "provider-error"
+        }
+      ]
+    }
+  ]
+}

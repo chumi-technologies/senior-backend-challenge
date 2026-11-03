@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "actor": "candidate_declared_unobserved",
+  "status": "not_completed",
+  "checkpointSha": "",
+  "initial": {
+    "hypotheses": [],
+    "predictions": [],
+    "nextCheck": "",
+    "scope": "",
+    "stopCondition": ""
+  },
+  "final": {
+    "decision": "",
+    "rationale": "",
+    "remainingUnknowns": []
+  },
+  "revisions": []
+}
