@@ -1,24 +1,39 @@
-# Candidate evidence format
+# Actual execution receipts
 
-`submission/evidence.json` is a receipt of actual execution, not an approval token.
-Use schemaVersion 1 and status `completed` only after recording work. It contains:
+`submission/evidence.json` records execution, not approval. Never make a skipped or failed check
+look passed. Keep replayable inputs and relevant raw output under submission/ and reference them.
 
-- `revision.headSha`: the commit checked out when you ran the command (40 lowercase hex).
-- `revision.isDirty`: whether that execution used local modifications.
-- `revision.diffSha256`: the source fingerprint emitted by `pnpm --silent evidence:revision`.
-  Despite the legacy field name, this is SHA-256 of sorted Git-visible candidate source paths,
-  modes, and bytes, excluding `submission/evidence.json` to avoid self-reference.
-- `checks`: a nonempty array of `command`, `executedAt` (timestamp), `status`, and `exitCode`.
-  Passed requires exitCode 0; failed requires a nonzero integer. Skipped/unavailable
-  requires exitCode null and a nonempty `reason`.
-- The `pnpm test:submission` entry must report the actual positive `testsExecuted` count.
+The completed receipt has `schemaVersion: 2`, `status: "completed"` and:
 
-Run tests, collect provenance, then write the receipt. Refresh it after source changes.
-Head/dirty metadata describes execution time; a later commit of the receipt does not
-turn the previous command into a run on the new SHA. The local checker compares the
-source fingerprint but cannot establish honest execution or independent human judgment.
-The interviewer reads actual output and independently reproduces relevant checks.
+- `revision`: `headSha` (40 lowercase hex characters), `isDirty` (boolean) and `diffSha256`
+  (the source fingerprint from `pnpm --silent evidence:revision`).
+- `checks`: a nonempty array of `command`, `status`, `exitCode`, and optional `testsExecuted`
+  and `log` (a retained output path). Record actual positive test counts when tests run.
 
-Do not claim a skipped check passed. Do not fabricate a receipt to satisfy the schema.
-Keep full logs in your private working repository or send them privately to the sender. Never
-include secrets, personal chats or interviewer material, and do not publish your solution.
+Passed means exit code 0; failed means an actual nonzero exit code. If a check is unavailable
+or skipped, record that status, a null exitCode and a reason. Do not invent execution to satisfy
+the structural checker or remove failures from the record. Execution timestamps, if included,
+need an explicit timezone. Keep raw logs in `submission/run-output/` as `.txt` or `.json` files;
+`.log` files are ignored and will not reach the reviewer by an ordinary commit.
+
+Use the supplied receipt template and provenance command rather than hand-invented hashes.
+A later commit containing the receipt does not turn a command run on an earlier dirty tree into
+a run on the final SHA. Refresh results after relevant source changes, including the second
+packet revision. Bind retained logs to the input and source they actually checked.
+
+The required gate invocation is:
+
+```sh
+pnpm exec tsx submission/verify.ts --target submission/gateway.ts
+```
+
+The gate must also accept another module path without editing the checker. Its stdout is one
+JSON object with `schemaVersion: 2`, `verdict` (`pass` or `fail`), actual `checksExecuted` and a
+`failures` array of diagnostic strings. Pass means exit 0 and no failures; fail means exit 1
+and useful failure entries. Diagnostics unrelated to this JSON go to stderr. Do not count an
+empty or skipped suite as a passing gate. A valid target must be able to pass.
+
+`pnpm verify:submission` checks artifact shape and declared provenance, not semantic correctness,
+honest execution or independent human judgment. The hiring team independently replays frozen
+sources and tests unfamiliar changes. Do not put private acceptance, answers, scoring, secrets
+or personal chats in receipts or logs. Keep your solution and evidence in your private repository.

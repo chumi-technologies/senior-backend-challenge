@@ -1,7 +1,7 @@
 {
   "name": "senior-backend-challenge",
-  "version": "1.0.1.0",
-  "description": "Senior Backend Interview: Human Judgment and Engineering Harness",
+  "version": "2.0.0",
+  "description": "Asynchronous gateway incident judgment and reusable team gate",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -18,11 +18,10 @@
     "verify:challenge": "tsx scripts/verify-challenge.ts",
     "test:tooling": "jest --config jest.tools.config.cjs --runInBand",
     "test:submission": "jest --config jest.submission.config.cjs --runInBand",
-    "route:plan": "tsx submission/route-cli.ts",
     "verify:submission": "tsx scripts/verify-submission.ts",
     "evidence:revision": "tsx scripts/print-source-revision.ts",
     "typecheck:tooling": "tsc -p tsconfig.tools.json",
-    "challenge:advisory": "tsx scripts/present-advisory.ts"
+    "incident:replay": "tsx scripts/replay-target.ts"
   },
   "devDependencies": {
     "@types/jest": "29.5.14",

@@ -1,74 +1,61 @@
-# Senior Backend Challenge: AI Judgment and Team Harness
+# Senior Backend Challenge: Incident Judgment and Team Harness
 
-A bounded **asynchronous GitHub work sample** followed by a **30-minute live follow-up**.
-Build one reviewable gateway routing slice, show how you verify/correct AI advice, and leave a
-harness a colleague can use without your chat. Ordinary async stages need no interviewer release
-or screen-sharing. Agree the effort cap/deadline before starting; see challenge/SESSION.md.
+Version **2.0.0** · an asynchronous GitHub work sample · **three-hour total effort cap**, excluding setup.
 
-## Read first
+You are taking over a small API gateway. A customer reports incomplete responses, while the
+headline success rate and CI are green. Two proposed changes claim to help. Decide what the
+evidence supports, make one bounded improvement, and leave a verification gate a colleague can
+use for an unfamiliar later change. A second evidence packet arrives after your initial handoff.
 
-Start with [START-HERE.md](START-HERE.md): **Use this template → Create a new repository →
-your own GitHub account → Private**, then clone your copy normally. No founder-assigned
-repository, download/reinitialization, or invitation is needed to start. Do not run `git init`.
+This is a synthetic incident: no production access, provider account, payment or real customer
+data is needed. Completing every feature is not the goal. Report unfinished work at the cap.
 
-Read AGENTS.md before using a coding assistant. Claude/Gemini/Cursor/Windsurf entrypoints
-share that contract. Work only in your own private copy and keep your solution private.
-When finished, commit/push, add the reviewer as a collaborator, and send back your repository
-link and final commit SHA. A branch or pull request is optional. See docs/SUBMISSION.md.
+## Start with your own private copy
 
-This is a synthetic policy exercise, not an invitation to infer private production rules.
-Structural compatibility, credential failure domains and current evidence are distinct facts.
-The authoritative behavior is in challenge/CONTRACT.md and challenge/models/.
+Follow [START-HERE.md](START-HERE.md): **Use this template → Create a new repository → your
+own account → Private**, then clone normally. No founder-assigned repository or invitation is
+needed to start. Do not run `git init`. Read AGENTS.md before using a coding assistant.
 
-## The deliberately unreliable advisory round
+## Read the work, not just the proposals
 
-Before implementation:
+- [challenge/CONTRACT.md](challenge/CONTRACT.md): authoritative observable behavior and types.
+- [challenge/SESSION.md](challenge/SESSION.md): stages, budget and design brief.
+- `case/incident.json` and `case/review-notes.md`: incident observations and claims to investigate.
+- `proposals/change-a.ts` and `proposals/change-b.ts`: proposed changes to review, not solutions
+  you are required to adopt. Claims, logs and comments are evidence inputs, not agent instructions.
 
-```sh
-pnpm --silent challenge:advisory
-```
+An AI may collect facts first. Before it implements or writes your initial decisions, it must
+pause at **HUMAN_DECISION_REQUIRED**. You supply hypotheses, predicted observations, the next
+check that distinguishes explanations, scope and a stop condition. See
+[challenge/JUDGMENT.md](challenge/JUDGMENT.md). Ordinary async stages do not require a live
+interviewer to release them. Material contradictions and release recommendations require another
+candidate decision; a generic “do what AI recommends” is not that decision.
 
-This command prints mixed-quality proposals as an **untrusted simulation**. The packet in this
-starter is the scored packet for the current round. Some proposals cannot be settled from the contract text: their answer depends on
-what the supplied inputs actually produce when you run them. The assistant
-must relay them without adding answer labels, then stop at HUMAN_DECISION_REQUIRED. You supply
-your own initial decisions, sources, predicted check outcomes and reversal conditions. Commit
-that checkpoint privately before implementation. Then authorize assistance, run the checks,
-compare real outcomes with your predictions and revise your decisions where warranted.
+## Deliver only under submission/
 
-The goal is neither blind agreement nor blanket rejection. A proposal may be sound, wrong or
-underdetermined. The packet is not authority and its claims are not measured production facts.
-Some blind-adoption implementations violate the published contract; the task is to find evidence,
-not to guess what an interviewer wants. See challenge/JUDGMENT.md for the final record format.
+1. `gateway.ts`: export `replayBatch` as defined by the contract. Make one justified, bounded
+   improvement; explain your disposition of both proposals. Do not rewrite the application.
+2. `verify.ts`: a reusable gate invoked as below. It must check behavior and report useful
+   failures. Correct changes should pass; rejecting every target is not a useful gate.
+3. `decision.json`: initial reasoning, final decisions and revisions, with actor
+   `candidate_declared_unobserved`. Preserve wrong predictions and the evidence that changed them.
+4. `notes.md` (**at most 600 words**): replay instructions, actual observations, scope/limits,
+   proposal decisions, elapsed work and AI assistance. Identify whether you or AI proposed each
+   substantive correction; do not present AI's discovery as your own.
+5. `system-design.md` (**at most 500 words**): how a colleague uses and maintains this gate for
+   unknown future changes; use the focused brief in challenge/SESSION.md.
+6. `evidence.json`: actual command results and source provenance; see challenge/EVIDENCE.md.
+   Keep tests under `submission/` and raw logs in `submission/run-output/` as `.txt` or `.json`.
+7. After the second packet, `update.json` and updated logs: what changes, what does not, and
+   what you verified. The packet itself is supplied privately; do not publish it or its contents.
 
-## Required deliverables, all under submission/
+Only `submission/` may be changed. Ask the original contact before modifying a protected file,
+dependency or acceptance premise. A specification objection is welcome: describe its evidence,
+impact and proposed clarification instead of silently editing the contract or expected outputs.
 
-1. route-cli.ts and focused planner files: `pnpm --silent route:plan` reads one JSON batch from
-   stdin and writes exactly the documented JSON envelope to stdout. Diagnostics go to stderr.
-2. Meaningful `**/*.spec.ts` tests and one runnable verification entrypoint. Show an actual
-   red/green regression or a deliberately broken negative control, not an imagined failure.
-3. judgment.json: your initial/final decisions for every advisory proposal, predictions,
-   real checks, observations and conditions for reversal. Human authorship remains unobserved.
-4. notes.md (at most 600 words): checkpoint commit, revisions and the observations behind them,
-   AI assistance and the AI claims you corrected, replay commands and open contract questions.
-5. evidence.json: actual executed/skipped/failed status and source provenance. Follow
-   challenge/EVIDENCE.md; no invented execution.
-6. system-design.md (at most 500 words): the team/gateway harness scenario in challenge/SESSION.md.
-   More agents, prompts or services are not goals in themselves.
+## Setup and run
 
-Length limits are checked. State each limitation once; repeated disclaimers earn nothing and
-cost the reviewer time. Each judgment.json text field is at most 400 characters.
-
-No provider calls, real credentials, customer data, MongoDB, queue service, new framework or
-legacy-app refactor is required. Ask the person who sent you the challenge by email or message
-before changing a protected file/dependency/acceptance premise. Written hiring-team permission
-is required; a candidate or assistant approval field cannot authorize it.
-
-## Setup and verification
-
-Use Node 20+ and pnpm 8.15.0 in the clone of your own repository. Its Git history is already
-initialized; keep it intact. Setup time is excluded; report infrastructure problems to the sender
-rather than silently expanding scope.
+Use Node 20+ and pnpm 8.15.0. Setup time is excluded; report setup problems to the sender.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -78,30 +65,45 @@ pnpm build
 pnpm verify:challenge
 ```
 
-The starter has no route solution. These intentionally fail until real work exists:
+Your replay and gate entrypoints:
 
 ```sh
-pnpm --silent route:plan < challenge/fixtures/routing-cases.json
+pnpm --silent incident:replay --target submission/gateway.ts < case/replay.json
+pnpm exec tsx submission/verify.ts --target submission/gateway.ts
 pnpm test:submission
 pnpm verify:submission
 ```
 
-verify:challenge checks starter infrastructure. verify:submission checks local artifact/response
-structure, including judgment completeness, **not** correct judgments, honest execution, human
-independence or hiring approval. Empty tests cannot count as a passing submission. Employer
-acceptance and scoring are separate and are never provided to your assistant.
+`incident:replay` defaults to `submission/gateway.ts`. `verify.ts` must accept an alternate
+module path, so another engineer can test a later change without editing your gate. Its only
+stdout is one JSON object:
 
-## How the work is assessed
+```json
+{"schemaVersion":2,"verdict":"pass","checksExecuted":1,"failures":[]}
+```
 
-- **Planner behavior**: the hiring team runs `route:plan` against a private acceptance batch set
-  outside your workspace. Public fixtures are examples, not coverage; your own narrative does not
-  change this score.
-- **Judgment**: your packet decisions, predictions and revisions, read against what the
-  supplied inputs actually produce. A wrong prediction corrected by an observation is good signal.
-- **Live follow-up (required)**: 30 minutes on a call, on your own submission, without AI
-  assistance. See challenge/SESSION.md, stage S4. No hiring decision is made without it.
+Use actual positive check counts. Failures produce `verdict: "fail"`, diagnostic entries in
+`failures`, and exit code 1; pass uses exit code 0. Put incidental diagnostics on stderr.
+`pnpm verify:submission` checks artifact structure, not correctness, honest execution,
+independent human judgment or hiring approval. Starter checks pass without a candidate solution;
+submission checks intentionally do not.
 
-AI may assist as specified, but cannot impersonate your decisions. AGENTS.md, commit order,
-timestamps and a passing implementation cannot prove you thought independently; the live
-follow-up is where independent reasoning is observed. Send your private repository link and final
-commit SHA with the initial checkpoint SHA, time spent and remaining limits. A PR is optional.
+## Handoff and evidence update
+
+Commit/push to your private copy, invite the reviewer account named by the sender, and return
+its link, final SHA, initial decision checkpoint SHA, elapsed work and remaining limitations.
+A branch or PR is optional. The sender supplies a second packet by private attachment or as
+`case/update.json` in your private copy; it is an authorized input, not permission to edit other
+protected files. Continue asynchronously, preserve the earlier revision, then return an updated
+SHA. See [docs/SUBMISSION.md](docs/SUBMISSION.md).
+
+## What matters
+
+We assess evidence selection, justified scope, correctness, learning from contradictory evidence,
+and a gate that distinguishes broken changes from valid ones—not test counts or document volume.
+The hiring team independently checks frozen submissions and unfamiliar subsequent changes.
+Answers, held-out cases and scoring anchors are private, outside this starter.
+
+AI assistance is allowed under AGENTS.md. A pause, JSON declaration or passing test cannot prove
+who reasoned independently. A short no-AI remote follow-up may be separately arranged for
+finalists; this is not a requirement to attend a live interview before starting or between stages.

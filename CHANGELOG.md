@@ -2,6 +2,16 @@
 
 For current candidate instructions, use START-HERE.md. Older entries describe retired workflows.
 
+## 2.0.0 — 2026-11-02
+
+- Replace the bounded routing worksheet with an asynchronous gateway incident work sample:
+  evidence selection, review of two proposals, a scoped improvement and a reusable targetable gate.
+- Require preserved candidate decisions and an evidence-update revision within a three-hour cap.
+- Evaluate unfamiliar faulty and valid later changes, rather than test count or narrative volume.
+- Keep the second evidence packet, reference answers and grading anchors in restricted storage.
+- Retain simple private-copy GitHub delivery and honest AI attribution; a short no-AI finalist
+  follow-up is separately arranged, not mandatory live stage release.
+
 ## 1.0.1.0 — 2026-10-30
 
 - Use one self-service path: candidates create a private copy with Use this template in their own

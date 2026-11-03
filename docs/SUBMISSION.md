@@ -1,48 +1,52 @@
 # Submit from your own GitHub repository
 
-The link you received is the public starter. You create the working repository yourself;
-the founder does not need to assign one. Follow [START-HERE.md](../START-HERE.md):
-**Use this template → Create a new repository → your own account → Private**, then clone it
-normally. Do not run `git init` or replace the clone's history.
+Follow [START-HERE.md](../START-HERE.md): **Use this template → Create a new repository →
+your own account → Private**, then clone normally. No founder-assigned repository is needed.
+Do not run `git init` or replace the clone's history. Keep the solution private.
 
-## Work and submit
+## Initial handoff
 
-1. Read AGENTS.md, agree the effort cap/deadline with the sender, and run the README setup checks.
-2. Run `pnpm --silent challenge:advisory`. Personally supply your initial decisions and
-   predictions, then commit that checkpoint before implementation.
-3. Continue asynchronously after explicitly deciding the route. Preserve corrections, real
-   check results and source provenance. You do not wait for interviewer release between stages.
-   Protected-file, dependency or acceptance changes still need written hiring-team permission
-   **before** editing; ask the sender by email or message.
-4. Complete the required artifacts under `submission/`, including replay commands and handoff
-   in notes.md. Commit and push your work to your own private repository. You may use its default
-   branch; a separate branch or pull request is optional, not a submission requirement.
-5. Invite the reviewer GitHub account named by the sender as a **collaborator** on your private
-   repository (Settings → Collaborators). Send the repository link and final commit SHA to the
-   sender, along with the initial checkpoint SHA, elapsed work and any unfinished items. If you
-   used a branch or PR, include its link too. Do not open PRs or issues on the public starter.
+1. Read AGENTS.md and agree the deadline with the sender. The default total effort cap is three
+   hours excluding setup/waiting for the update. Reserve time for the second packet.
+2. After read-only fact collection, supply your own initial decisions and predictions in
+   submission/decision.json and commit that checkpoint before implementation.
+3. Work asynchronously, preserving contradictions, revisions, commands and source provenance.
+   Protected-file/dependency/acceptance changes require hiring-team written permission before
+   editing; ask through the existing email/message conversation.
+4. Complete the required files in README.md, commit and push to your own private repository.
+   A separate branch or PR is optional. Never open solution PRs/issues on the public starter.
+5. Invite the reviewer account named by the sender in **Settings → Collaborators**. Send the
+   repository link, initial handoff SHA, initial decision checkpoint SHA, elapsed work and
+   unfinished items. Include a branch or PR link if you used one.
 
-Get the final SHA after committing:
+Get the SHA after committing:
 
 ```sh
 git rev-parse HEAD
 ```
 
-Keep the repository private. Never send credentials, personal chats, interviewer answers,
-hidden acceptance or scoring material. You are not expected to have any interviewer material.
+## Evidence update and final handoff
+
+The original contact sends the second packet privately, either as an attachment or as an
+authorized case/update.json in your private copy. No synchronous stage-release call is required.
+If it has not arrived, send the initial handoff and reserve time; do not invent a packet.
+
+Use the remaining budget to record your revisions in submission/update.json and rerun relevant
+checks. Preserve the initial handoff commit. Commit/push again and return the **final SHA**,
+updated elapsed work and unresolved limits. The packet's input status does not authorize other
+protected edits. Stop at the total cap instead of silently extending it.
+
+The hiring team reads frozen revisions, independently checks behavior and unfamiliar later
+changes, and may separately arrange a short no-AI remote follow-up for finalists. Artifact
+completeness, commit order and timestamps do not prove AI-free reasoning or hiring approval.
 
 ## Already started?
 
-Do not redo your work. If it is already in your own private repository, continue there. If you
-cloned the public starter, create an empty private repository under your account, change the
-clone's `origin` to that repository, then push your existing branch. Keep `.git`, your checkpoint
-and all subsequent commits intact; no archive download or history reset is required. Never push
-your solution to the starter. Ask the sender if you need the reviewer account.
+Do not discard existing work. If it is in your own private repository, continue there. If you
+cloned the public starter, create an empty private repository under your account, change origin
+to that repository, and push your existing branch. Keep .git and all checkpoint/correction
+commits intact. No archive download or history reset is needed. Ask the sender for the reviewer
+account or clarification of which assessment version applies; do not mix versions silently.
 
-## What happens next
-
-The hiring team reads your submission at the final SHA, independently runs its private acceptance
-batches, and schedules the required 30-minute S4 live follow-up. Clarifications use the existing
-email or message conversation. No separate GitHub discussion is needed. Stop at the agreed
-effort cap and report unfinished work; local checks, commit order and timestamps are not a hiring
-decision or proof of AI-free reasoning.
+Never submit credentials, personal chats, private answer keys or hidden acceptance material.
+You are not expected to have interviewer-only material.

@@ -1,8 +1,5 @@
-# Candidate team/system design
+# Team gate design
 
-Status: NOT_COMPLETED
+NOT_COMPLETED
 
-At most 500 words. Address the three-engineer gateway scenario in challenge/SESSION.md: one
-measurable bottleneck and the measurement that would falsify it, authority boundaries, author
-versus independent acceptance, compatible releases and customer proof. Name one mechanism to
-delete, one decision kept human-owned and one scope deferred. Disclose AI assistance.
+Explain how a colleague accepts or rejects an unseen change without your chat, independent checks, source identity, safe ownership and customer evidence. Maximum 500 words.
