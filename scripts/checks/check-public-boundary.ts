@@ -1,5 +1,5 @@
 type PublicFile = { readonly path: string; readonly content: string };
-const RESTRICTED_PATH: RegExp = /(^|\/)(?:interviewer-kit|hidden-cases|answer-key|reference-solution|scorecard)(?:\/|\.|$)/i;
+const RESTRICTED_PATH: RegExp = /(^|\/)(?:interviewer-kit|hidden-cases|answer-key|reference-solution|scorecard|rubric)(?:\/|\.|$)|(^|\/)v2\/(?:reference|acceptance|targets|packets|calibration|operations)(?:\/|\.|$)/i;
 const PRIVATE_MARKER: string = ['INTERVIEWER', 'ONLY', 'DO', 'NOT', 'PUBLISH'].join('_');
 /** Detect obvious private-material accidents, not certify historical confidentiality. */
 export function checkPublicBoundary(files: readonly PublicFile[]): readonly string[] {

@@ -3,7 +3,7 @@ describe('obvious public publication accidents', (): void => {
   it('allows a candidate-safe contract', (): void => {
     expect(checkPublicBoundary([{ path: 'AGENTS.md', content: 'Read the public contract.' }])).toEqual([]);
   });
-  it.each(['answer-key.json', 'docs/scorecard.md', 'hidden-cases/input.json'])('rejects restricted material path %s', (inputPath: string): void => {
+  it.each(['answer-key.json', 'docs/scorecard.md', 'hidden-cases/input.json', 'v2/targets/example.mjs', 'v2/packets/example.json', 'docs/rubric.md'])('rejects restricted material path %s', (inputPath: string): void => {
     expect(checkPublicBoundary([{ path: inputPath, content: '' }]).length).toBeGreaterThan(0);
   });
   it('rejects the private material marker without embedding it in a public fixture', (): void => {
