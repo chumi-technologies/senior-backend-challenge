@@ -16,6 +16,8 @@ describe('submission declarations, not correctness', (): void => {
   });
   it('rejects zero executed checks or contradictory pass status', (): void => {
     expect(checkSubmissionRecords({ ...input, evidence: { ...evidence, checks: [] } })).toContain('Incomplete execution receipt');
+    expect(checkSubmissionRecords({ ...input, evidence: { ...evidence, checks: [{ command: 'x', status: 'passed', exitCode: 0 }] } })).toContain('Incomplete execution receipt');
+    expect(checkSubmissionRecords({ ...input, evidence: { ...evidence, checks: [{ command: 'x', status: 'passed', exitCode: 0, testsExecuted: 0 }] } })).toContain('Incomplete execution receipt');
     expect(checkSubmissionRecords({ ...input, evidence: { ...evidence, checks: [{ command: 'x', status: 'passed', exitCode: 1, testsExecuted: 1 }] } })).toContain('Incomplete execution receipt');
   });
   it('requires a complete update only when the packet is received', (): void => {

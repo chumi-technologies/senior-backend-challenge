@@ -9,6 +9,8 @@ The completed receipt has `schemaVersion: 2`, `status: "completed"` and:
   (the source fingerprint from `pnpm --silent evidence:revision`).
 - `checks`: a nonempty array of `command`, `status`, `exitCode`, and optional `testsExecuted`
   and `log` (a retained output path). Record actual positive test counts when tests run.
+  At least one check must include a positive `testsExecuted` count from actual execution;
+  a receipt with no executed behavioral checks is incomplete.
 
 Passed means exit code 0; failed means an actual nonzero exit code. If a check is unavailable
 or skipped, record that status, a null exitCode and a reason. Do not invent execution to satisfy
